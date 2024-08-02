@@ -6,19 +6,18 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "catan"
+name = "guru"
 
 version = "0.1"
 
 authors = [
     { name = "Pietro Pasotti", email = "pietro.pasotti@canonical.com" }
 ]
-description = "Python library providing a state-transition testing API for multiple related charms."
+description = "Python library providing an integration testing API for Juju."
 license.text = "Apache-2.0"
 keywords = ["juju", "test"]
 
 dependencies = [
-    "ops>=2.6",
     "ops-scenario~=6.0",
     "PyYAML>=6.0.1",
 ]
@@ -36,12 +35,12 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/canonical/catan"
-"Bug Tracker" = "https://github.com/canonical/catan/issues"
+"Homepage" = "https://github.com/canonical/guru"
+"Bug Tracker" = "https://github.com/canonical/guru/issues"
 
 
 [tool.setuptools.package-dir]
-catan = "catan"
+guru = "guru"
 
 
 [tool.black]
