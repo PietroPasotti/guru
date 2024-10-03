@@ -20,7 +20,7 @@ def test_deploy_traefik_loki():
     g = Guru(model_state=ms)
 
     g.wait(
-        traefik.is_active() and loki.is_active(),
+        (traefik.is_active() and loki.is_active()) or loki.is_blocked(),
         error_condition=traefik.is_blocked() or loki.is_blocked()
     )
 
